@@ -22,8 +22,10 @@ const output = [{
 ]
 
 const plugins = [
-    strip(),
-    babel()
+    babel({
+        exclude: 'node_modules/**'
+    }),
+    strip()
 ]
 
 export default {

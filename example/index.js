@@ -3,10 +3,13 @@ import common from "../common";
 import plugin from "../dist/index.js";
 
 const auto = new qiauto({
-    "task1": {
+    "exporter": {
         module: plugin,
-        directory: common.path.EXAMPLE
+        directory: common.path.EXAMPLE + "/directory",
+        options: {
+            name: "index.jsx"
+        }
     }
 })
 
-console.log(auto["task1"]);
+console.log(auto["exporter"].once());

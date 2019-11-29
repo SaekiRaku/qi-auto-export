@@ -1,13 +1,13 @@
 {
-  "name": "qi-auto-plugin-template",
+  "name": "@qiqi1996/qi-auto-export",
   "version": "1.0.0",
-  "description": "The template for making plugin of qi-auto.",
+  "description": "Automatically generate import and export code based on directory structure.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
     "dev": "node -r esm bootstrap.js dev",
     "build": "node -r esm bootstrap.js build",
-    "test": "npm run build && mocha --require @babel/register ./test/**/*.test.js"
+    "test": "npm run build && mocha --require @babel/register,./mocha-global.js ./test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,10 @@
     "esm": "^3.2.25",
     "mocha": "^6.2.2",
     "rollup": "^1.27.5",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup-plugin-babel": "^4.3.3",
+    "uuid": "^3.3.3"
+  },
+  "dependencies": {
+    "@qiqi1996/qi-i18n-node": "^1.0.0"
   }
 }

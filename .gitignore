@@ -1,6 +1,6 @@
 # Thanks to https://github.com/github/gitignore/blob/master/Node.gitignore
 
-docs/.vuepress/dist
+temp/
 
 # Logs
 logs
